@@ -1,11 +1,11 @@
-/* let Name = prompt("Как тебя зовут?");
+ let Name = prompt("Как тебя зовут?");
 alert (`Тебя зовут ${Name}`); */
 
-/* let name = prompt("Ваше имя?", "");
+ let name = prompt("Ваше имя?", "");
 alert(name); */
 
  console.log("0"); 
-/* 
+
  let questain = +prompt("ВВедите любое число");
 
  if (questain > 0) {
@@ -16,7 +16,7 @@ alert(name); */
      alert(0);
  };
 
- */
+ 
 
  let message = (age < 3) ? 'Здравствуй, малыш!' :
  (age < 18) ? 'Привет!' :
