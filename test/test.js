@@ -1,8 +1,8 @@
- let Name = prompt("Как тебя зовут?");
-alert (`Тебя зовут ${Name}`); */
+/*  let Name = prompt("Как тебя зовут?");
+alert (`Тебя зовут ${Name}`); 
 
  let name = prompt("Ваше имя?", "");
-alert(name); */
+alert(name); 
 
  console.log("0"); 
 
@@ -34,5 +34,6 @@ if (login == 'Сотрудник') {
   message = 'Нет логина';
 } else {
   message = '';
-}
+} */
  
+console.log([ ] + false - null + true);
