@@ -106,10 +106,38 @@ while (i < 3) { // выводит 0, затем 1, затем 2
   i++;
 }
  */
-for (let i = 0; i < 10; i++) {
+/* for (let i = 0; i < 10; i++) {
 
   // если true, пропустить оставшуюся часть тела цикла
   if (i % 2 == 0) continue;
 
   alert(i); // 1, затем 3, 5, 7, 9
-}
+} */
+
+
+
+/* switch (num) {
+  case num < 49:
+      console.log("Неверно");
+      break;
+  case num > 100:
+      console.log("Много");
+      break;
+  case num > 80:
+      console.log("Все еще много");
+      break;
+  case num = 50:
+      console.log("Верно");
+      break;
+  default:
+      console.log("Что-то пошло не так");
+      break;
+    }
+ */
+
+/* while (num < 55) {
+  console.log(num);
+  num++;
+} */
+
+console.log("Ёжик" > "яблоко");
