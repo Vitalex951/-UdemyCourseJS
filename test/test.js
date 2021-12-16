@@ -140,4 +140,103 @@ while (i < 3) { // выводит 0, затем 1, затем 2
   num++;
 } */
 
-console.log("Ёжик" > "яблоко");
+console.log("яжик" > "яблоко");
+
+//Функции
+
+
+/* let num = 10;
+function showFirstMessage(text) {
+  alert(text);
+  let num = 20;
+  console.log(num);
+}
+
+showFirstMessage("Hello");
+console.log(num); */
+
+/* let calc = function (a,b) {
+  return (a+b);
+} */
+/* let calc = (a,b) => a+b
+console.log(calc(3,4));
+
+console.log(calc(8,4));
+
+function reutVar() {
+  let num = 50;
+  return num;
+}
+
+let anotherNum = reutVar();
+console.log(anotherNum);
+
+let str = "test";
+
+console.log(str.length);
+
+console.log(str.toUpperCase()); // все заглавные
+console.log(str.toLowerCase()); // все маленькие буквы
+
+let twelve = "12.2px"; */
+
+/* console.log(Math.round(twelve)); */
+/* console.log(parseInt(twelve));
+console.log(parseFloat(twelve)); */
+
+/* let a = 3;
+ function addTwo(x) {
+ let ret = x + 2
+ return ret
+}
+let b = addTwo(a)
+console.log(b);
+console.log(b);
+
+let val1 = 2
+function multiplyThis(n) {
+let ret = n * val1
+return ret
+ }
+ let multiplied = multiplyThis(6)
+ console.log('example of scope:', multiplied) */
+
+/*  let val = 7                          //1
+ function createAdder() {             //2
+   function addNumbers(a, b) {  
+     let a = 1;      //3
+     let ret = a + b                  //4
+     return ret                       //5
+   }                                  //6
+   return addNumbers                  //7
+ }                                    //8
+ let adder = createAdder()            //9
+ let sum = adder(val, 8)              
+console.log('example of function returning a function: ', sum);
+console.log('example of function returning a function: ', sum); */
+
+// 1: */ function createCounter() {
+//*   2: */   let counter = 0
+ ///*  3:  */  const myFunction = function() {
+ ///*  4: */     counter = counter + 1
+  ///* 5: */     return counter
+  ///* 6:  */  }
+ ///*  7: */   return myFunction
+ ///*  8: */ }
+  ///* 9: */ const increment = createCounter()
+ ///* 10: */ const c1 = increment()
+ ///* 11: */ const c2 = increment()
+ ///* 12: */ const c3 = increment()
+ ///* 13: */ console.log('example increment', c1, c2, c3)
+
+ /* let c = 4
+function addX(x) {
+  return function(n) {
+     return n + x
+  }
+}
+const addThree = addX(3)
+let d = addThree(c)
+console.log('example partial application', d)
+console.log('example partial application', d)
+console.log('example partial application', d) */
