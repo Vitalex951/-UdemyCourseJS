@@ -1,5 +1,5 @@
 
-let num = +prompt('Введите число', 0);
+let num = prompt('Введите число', 0);
 
 /* if (num < 49) {
     console.log("неверно")
@@ -31,3 +31,4 @@ switch (true) {
         break;
 
 }
+

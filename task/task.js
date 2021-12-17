@@ -195,45 +195,22 @@ alert(truncate(str)); */
 // Результатом функции должна быть та же строка, если усечение не требуется, либо, если необходимо, усечённая строка.
 
 
-      /* function truncate(str, maxlength) {
-        return (str.length > maxlength) ?
-          str.slice(0, maxlength - 1) + '…' : str;
-      }
-       */
-
-      /* function truncate(str, maxLength) {
-        if ( str.length > maxLength) {
-            console.log(maxLength);
-            console.log(str);
-            let newStr = str.slice(maxLength) + "...";
-            console.log(newStr);
-            return newStr;
-          };
-        return str;
-      }
-
-      alert(truncate(str)); */
-/*       let str = prompt("Введите предложение", "привет");
-      let maxLength = +prompt("Ввидети максимальную длину строки","3");  */
-
-    /*   function truncate(str, maxlength) {
+     /*  let str = prompt("Введите предложение", "привет");
+      let maxLength = +prompt("Ввидети максимальную длину строки","3");  
+     function truncate() {
         if (str.length > maxLength) {
-        return str.slice(0, maxLength - 1) + '...';
+          str = "Досвидос";
+          maxLength = 3;
+          let newStr = str.slice(0, maxLength - 1) + '...';
+         return newStr;  
         }
-        
         return str; 
       }
-
-      alert(truncate()); */
-/* 
-      function truncate(str="ПРИВЕТ КАК ДЕЛА", maxLength=5) {
-        return (str.length > maxLength) ?
-          str.slice(0, maxLength - 1) + '.' : str;
-      }
-
-      alert(truncate.maxLength);
- */
-
+      alert(str);
+      truncate(str, maxLength);
+      alert(str); */
+      
+ 
 
 
 
@@ -243,21 +220,103 @@ alert(truncate(str)); */
 /* let str = "$120";
 
 function extractCurrencyValue(str) {
-  return +str.substring(0);
+  let newstr = +str.slice(1);
+  alert(newstr);
 }
-console.log(extractCurrencyValue(str); */
+extractCurrencyValue(str);
+ */
 
-function extractCurrencyValue(str) {
-  let strNew = "";
-  
-  for (let i = 0; i < str.length; i++) {
-  if (isFinite(str[i])) {
-  strNew += str[i];
-  }
-  }
-  
-  return +strNew;
-  }
-  
-  alert( extractCurrencyValue('120$') );
 
+/* Следующая функция возвращает true, если параметр age больше 18.
+В ином случае она задаёт вопрос confirm и возвращает его результат.
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Родители разрешили?');
+  }
+}
+Перепишите функцию, чтобы она делала то же самое, но без if, в одну строку.
+Сделайте два варианта функции checkAge:
+Используя оператор ?
+Используя оператор || */
+/* let result = условие ? значение1 : значение2;
+
+function checkAge(age) {
+  return age < 18 ||  
+}
+
+function checkAge(age) {
+  return age >18 ? true : confirm('Родители разрешили?');
+} */
+
+
+
+//Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
+
+/* function min(a,b) {
+  if (a>b) return alert(a);
+  return alert(b);
+}
+
+let a = +prompt("Напишите число a");
+let b = +prompt("Напишите число b");
+
+min(a,b); */
+
+/* 
+Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и воз результат.
+ Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n). 
+ P.S. В этой задаче функция обязана поддерживать только натуральные значения n, т.е. целые от 1 и выше. */
+
+
+ /* let x = +prompt('Введите x', 2);
+ let n = +prompt('Введите n', 2);
+
+  if (n>0) {
+
+ function pow(x,n) {
+   let y = x;
+      for (i=1; i <= n; i++) {
+      y *= x; 
+   }
+   return y;
+ } alert( pow(x, n) );
+} else {
+  alert("введите натуральное число");
+}
+ */
+
+/* function pow(x, n) {
+  return n < 1 ? alert("В степени можно использовать только натуральное число выше 0" ) : x**n
+  }
+  alert(pow (prompt('Укажите число'), prompt('Укажите степень числа больше 0')))
+
+ */
+
+
+  // Замените код Function Expression стрелочной функцией:
+
+  // function ask(question, yes, no  ) {
+  //   if (confirm(question)) yes()
+  //   else no();
+  // }
+  
+  // ask(
+  //   "Вы согласны?",
+  //   function() { alert("Вы согласились."); },
+  //   function() { alert("Вы отменили выполнение."); }
+  // );
+
+  function ask (question, yes, no) {
+    if (confirm(question)) yes ()
+    else no(); 
+  };
+  
+  ask(
+    "Вы согосаны",
+    () => alert("Вы согласились."),
+    () => alert("Вы отменили выполнение.")
+  );
+
+  

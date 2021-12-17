@@ -140,7 +140,7 @@ while (i < 3) { // выводит 0, затем 1, затем 2
   num++;
 } */
 
-console.log("яжик" > "яблоко");
+/* console.log("яжик" > "яблоко"); */
 
 //Функции
 
@@ -244,13 +244,38 @@ console.log('example partial application', d) */
 
 // Строки
 
-let str = "stringify";
+/* let str = "stringify"; */
 
 // для substring эти два примера — одинаковы
-alert( str.substring(2, 6) ); // "ring"
-alert( str.substring(6, 2) ); // "ring"
+/* alert( str.substring(2, 6) ); // "ring"
+alert( str.substring(6, 2) ); // "ring" */
 
 // …но не для slice:
-alert( str.slice(2, 6) ); // "ring" (то же самое)
-alert( str.slice(-6, -2) ); // "" (пустая строка)
+/* alert( str.slice(2, 6) ); // "ring" (то же самое)
+alert( str.slice(-6, -2) ); // "" (пустая строка) */
+
+
+/* function retVar() {
+  let num = 50;
+  return num;
+} */
+
+/* let newNum = retVar(); */
+/* console.log(retVar());
+ */
+
+
+let appDatamoneyPerDay = 50;
+function detectLevel1() {
+    if (appDatamoneyPerDay < 100) {
+        alert("Минимальный уровень достатка");
+    } else if (appDatamoneyPerDay > 100 && appDatamoneyPerDay < 2000) {
+       alert('Средний уровень достатка');
+    } else if (appDatamoneyPerDay > 2000) {
+       return alert("Высокий уровень достатка");
+    } else {
+       alert("Ошибка");
+    };
+}
+detectLevel1();
 
