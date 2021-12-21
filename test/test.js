@@ -265,7 +265,7 @@ alert( str.slice(-6, -2) ); // "" (пустая строка) */
  */
 
 
-let appDatamoneyPerDay = 50;
+/* let appDatamoneyPerDay = 50;
 function detectLevel1() {
     if (appDatamoneyPerDay < 100) {
         alert("Минимальный уровень достатка");
@@ -277,5 +277,91 @@ function detectLevel1() {
        alert("Ошибка");
     };
 }
-detectLevel1();
+detectLevel1(); */
 
+/* a = "5";
+b = 2; 
+c = a++git+b;
+ */
+
+/* let fruits = ["Яблоко", "Апельсин"];
+
+fruits.push("Груша");
+
+alert( fruits ); // Яблоко, Апельсин, Груша
+
+fruits.push();
+fruits[fruits.length];
+ */
+
+/* let fruits = ["Яблоки", "Груша", "Апельсин"]; */
+
+// добавляем новое значение в "копию"
+/* let shoppingCart = fruits;
+shoppingCart.push("Банан"); */
+
+// что в fruits?
+/* alert( fruits.length ); // ? */
+
+
+// let arr = ['first', 2, 3, 'four', 5];
+// arr.pop();
+// arr.push('5');
+// arr.shift();
+// arr.unshift('1');
+
+// for (let i=0; i<arr.length; i++) {
+//   console.log(arr[i]);
+// }
+
+/* arr.forEach(function(item, i, mass){
+  console.log(i + ': ' + item + " (массив: " +mass + ')');
+});
+
+console.log(arr.length);
+
+let mass = [1, 3, 4, 6, 7];
+for (let key of mass) {
+      console.log(key);
+}
+for (let key in mass) {
+  console.log(key);
+} */
+
+
+/* let ans = prompt("", ''),
+    arr = [];
+
+    arr = ans.split(',');
+    console.log(arr);
+  */
+/* 
+    let arr = ['qqq', 'aaa', 'ass', 'gggg'],
+        i = arr.join(', ');
+        console.log(i);  */
+   /*      let arr = [1, 15, 4],
+            i = arr.sort(compareNum);
+
+            function compareNum(a,b) {
+              return a-b;
+            }
+        console.log(arr); */
+
+/* let soldier = {
+    health: 400, 
+    armor: 100,
+
+};
+
+let Jon = {
+    health: 100,
+};
+Jon.__proto__ = soldier;
+console.log(Jon);
+console.log(Jon.armor);
+ */
+
+let a = prompt();
+
+
+alert(typeof(a));
