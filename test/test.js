@@ -361,7 +361,27 @@ console.log(Jon);
 console.log(Jon.armor);
  */
 
-let a = prompt();
+/* let a = prompt();
 
 
 alert(typeof(a));
+ */
+
+function hello() {
+  console.log("Hello word");
+}
+
+hello();
+
+function hi() {
+  console.log("Hellj Word");
+}
+hi();
+
+let arr = [1, 15, 4, 38, 42],
+    i = arr.sort(compareNum);
+        function compareNum(a,b) {
+            return a -b;
+        }
+
+console.log(arr);
