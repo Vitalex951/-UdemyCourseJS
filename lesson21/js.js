@@ -1,7 +1,19 @@
-let box = document.querySelector('.box');
+let box = document.querySelector('.box'),
+    btn = document.querySelector('button');
 
-let width = box.offsetWidth,
-    height = box.offsetHeight;
+let width = box.clientWidth,
+    height = box.clientHeight;
 
 console.log(width);
 console.log(height);
+console.log(box.getBoundingClientRect());
+console.log(document.documentElement.clientWidth);
+console.log(document.documentElement.clientHeight);
+
+btn.addEventListener('click', function() {
+    box.scrollTop = 0;
+});
+
+scrollBy(0, 200);
+scrollTo(0, 500)
+
