@@ -50,8 +50,8 @@ showThis(5, 5); */
 };
 
 obj.sum(); */
-
-/* let user = {
+/* 
+let user = {
     name: 'John'
 };
 
@@ -66,12 +66,12 @@ console.log(sayName.apply(user, ['Smit'])); // здесь можно перед�
 
 function cunt(number) {
     return this*number;
-}
+} */
 
-let double = cunt.bind(2); // this становится в cunt 2
+/* let double = cunt.bind(2); // this становится в cunt 2
 console.log(double(3));
 console.log(double(10));
-console.log(double(20)); */
+console.log(double(20));  */
 
 /* 
 let btn = document.querySelector('button');
@@ -88,3 +88,27 @@ btn.addEventListener('click', function() {
 // 2) Метод объекта - this = объекту
 // 3) Конструктор (nrw) - this = новый созданный объект
 // 4) Указания конкретного контекста - call, apply, bind
+
+
+let obj = {
+    name: "Vitali",
+    age: 25
+};
+
+obj.face = {
+    width: 1024,
+    height: 1070
+};
+console.log(typeof(obj.name));
+
+
+
+let c = 4
+function addX(x) {
+  return function(n) {
+     return n + x
+  }
+}
+const addThree = addX(3)
+let d = addThree(c)
+console.log('example partial application', d)
