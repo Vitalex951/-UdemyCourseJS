@@ -367,7 +367,7 @@ console.log(Jon.armor);
 alert(typeof(a));
  */
 
-function hello() {
+/* function hello() {
   console.log("Hello word");
 }
 
@@ -384,4 +384,30 @@ let arr = [1, 15, 4, 38, 42],
             return a -b;
         }
 
-console.log(arr);
+console.log(arr); */
+
+
+/* 
+let age = document.getElementById('age');
+
+function showUser (surname, name) {
+  alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
+  console.log(this.value);
+};
+
+showUser(); */
+
+
+// Второе задание
+
+
+    
+  let  btn = document.querySelector('button');
+
+btn.addEventListener('click', function() {
+  let age = document.getElementById('age').value,
+      name = document.querySelector('#name').value;
+  console.log(age);
+         alert("Пользователь " + this.name + ""+ ", его возраст " + this.age);
+});
+

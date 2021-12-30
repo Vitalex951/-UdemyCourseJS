@@ -1,5 +1,5 @@
-window.addEventListener("DOMContentLoaded", function () {
-    "use strict"; 
+ window.addEventListener("DOMContentLoaded", function () {
+   "use strict"; 
 
     let tab = document.querySelectorAll('.info-header-tab'),
         info = document.querySelector('.info-header'),
@@ -36,10 +36,43 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     });    
 
+     //modal
+
+     let more = document.querySelector('.more'),
+     overlay = document.querySelector('.overlay'),
+     close = document.querySelector('.popup-close');
+     console.log(more);
+     console.log(overlay);
+
+     more.addEventListener('click', function() {
+         overlay.style.display = 'block';
+         this.classList.add('more-splash');
+         document.body.style.overflow = 'hidden';
+         console.log(this);
+     });
+
+     close.addEventListener('click', function() {
+         overlay.style.display = 'none';
+         more.classList.remove('.more-splash');
+        document.body.style.overflow = '';
+     });
+
+
+        
+
+
+
+
+
+
+
+
+
+
 
     //Timer
 
-    let deadline = '2021-12-27';
+    let deadline = '2021-12-31';
 
     function getTimeRemaining(endTime) {
 
@@ -82,5 +115,10 @@ window.addEventListener("DOMContentLoaded", function () {
         }
 
         setClock('timer', deadline);
-    });
+
+
+       
+
+           
+   });
 
