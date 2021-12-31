@@ -71,7 +71,7 @@
 
 
     //Timer
-
+/* 
     let deadline = '2021-12-31';
 
     function getTimeRemaining(endTime) {
@@ -114,9 +114,49 @@
                 }
         }
 
-        setClock('timer', deadline);
+        setClock('timer', deadline); */
 
+        let deadline = "2022-09-03"; //
 
+        function getTimeRemaining(endtime) {
+          let t = Date.parse(endtime) - Date.parse(new Date()); // передаем дедлайн и отнимаем от него текущую дату (все в милисекундах)
+          let seconds = Math.floor((t / 1000) % 60); // вычленяем кол-во целых минут и берем остаток
+          let minutes = Math.floor((t / 100 / 60) % 60); // получаем кол-во часов и оставляем остаток в виде минут
+          let hours = Math.floor(t / (1000 * 60 * 60)); // из всего кол-ва милисекунд взяли кол-во целых часов
+          /*
+              hours = Math.floor((Math.floor((t/100/60) % 24))); // получим хвостик с часами
+              days = Math.floor((t/(1000*60*60*24))); // получаем дни
+              */
+          return {
+            total: t,
+            hours: hours,
+            minutes: minutes,
+            seconds: seconds,
+          };
+        }
+      
+        function setClock(id, endtime) {
+          // выставляет и запускает наши часы
+          let timer = document.getElementById(id),
+            hours = timer.querySelector(".hours"),
+            minutes = timer.querySelector(".minutes"),
+            seconds = timer.querySelector(".seconds");
+          let timeInterval = setInterval(updateClock, 1000);
+      
+          function updateClock(a) {
+            // функция записывает в верстку наши данные
+            let t = getTimeRemaining(endtime);
+            hours.textContent = t.hours;
+            minutes.textContent = t.minutes;
+            seconds.textContent = t.seconds;
+      
+            if (t.total <= 0) {
+              clearInterval(timeInterval);
+            }
+          }
+        }
+      
+        setClock("timer", deadline);
        
 
            
