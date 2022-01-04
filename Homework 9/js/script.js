@@ -1,4 +1,4 @@
- window.addEventListener("DOMContentLoaded", function () {
+//  window.addEventListener("DOMContentLoaded", function () {
    "use strict"; 
 
     let tab = document.querySelectorAll('.info-header-tab'),
@@ -159,6 +159,19 @@
         setClock("timer", deadline);
        
 
-           
-   });
+    let message = {
+        loading: 'Загрузка...',
+        success: 'Спасибо! Скоро мы с вами свяжемся!',
+        failure: 'Что-то пошло не так...'
+    };
 
+    let form = document.querySelector('.main-form'),
+        input = form.getElementsByTagName('input'),
+        statusMessage = document.createElement('div');
+
+        statusMessage.classList.add('status');
+        console.log(form);
+        console.log(input);
+        console.log();
+//    });
+    form.addEventListener('')
