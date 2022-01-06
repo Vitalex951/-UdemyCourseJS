@@ -1,2 +1,3 @@
-let a = prompt('123');
-console.log(a);
+let str = 'Hello word';
+
+console.log(str.slice(-8,-10));
