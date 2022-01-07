@@ -1,3 +1,5 @@
-let str = 'Hello word';
+"use strict";
 
-console.log(str.slice(-8,-10));
+console.log(typeof(true + false));
+
+alert( +"Infinity" ); 
