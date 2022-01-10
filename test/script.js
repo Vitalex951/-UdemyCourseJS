@@ -1,5 +1,13 @@
 "use strict";
 
-console.log(typeof(true + false));
+function sayHiBye(firstName, lastName) {
 
-alert( +"Infinity" ); 
+    // функция-помощник, которую мы используем ниже
+    function getFullName() {
+      return firstName + " " + lastName;
+    }
+  
+    alert( "Hello, " + getFullName() );
+    alert( "Bye, " + getFullName() );
+  
+  }
