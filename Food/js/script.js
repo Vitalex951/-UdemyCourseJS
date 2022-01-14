@@ -89,4 +89,60 @@ function setClock(selector, endtime) {
 }
     setClock('.timer', deadline);
 
+    //Modal
+
+    const modalTrigger = document.querySelectorAll('[data-modal'),
+          modalClose = document.querySelector('[data-close]'),
+          modal = document.querySelector('.modal');
+
+          console.log(modalTrigger);
+          console.log(modalClose);
+
+
+    modalTrigger.forEach((item) => {
+        item.addEventListener('click', (i) => {
+            showModal();
+        });
+    });
+
+    function showModal() {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        clearInterval(modalTimerId);
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    modal.addEventListener('click' , (i) => {
+        console.log(i.target);
+        if (i.target === modal) {
+            closeModal();
+        }
+    });
+
+    modalClose.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape"&&  modal.style.display == 'block') {
+            console.log('11111');
+            closeModal();
+        }
+    });
+
+    const modalTimerId = setTimeout(showModal, 20000);
+
+    function showModalByScroll() {
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+            showModal();
+            window.removeEventListener('scroll', showModalByScroll);
+        }
+    }
+
+    window.addEventListener('scroll', showModalByScroll);
+
+      
+       
 });
