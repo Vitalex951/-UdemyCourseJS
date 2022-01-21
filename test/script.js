@@ -1,13 +1,7 @@
 "use strict";
 
-function sayHiBye(firstName, lastName) {
-
-    // функция-помощник, которую мы используем ниже
-    function getFullName() {
-      return firstName + " " + lastName;
-    }
-  
-    alert( "Hello, " + getFullName() );
-    alert( "Bye, " + getFullName() );
-  
-  }
+for(let i=0; i<10; i++) {
+  setTimeout(function() {
+    alert(i);
+  }, 100);
+}
