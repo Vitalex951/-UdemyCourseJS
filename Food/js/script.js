@@ -220,10 +220,22 @@ window.addEventListener('DOMContentLoaded', function() {
     };
 
     forms.forEach(item => {
-        postData(item);
+        bindPostData(item);
     });
 
-    function postData(form) {
+    const postData = (url, data) => {
+        const res =fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'aplicatin/json'
+            },
+            body: data
+        });
+        return res.json();
+    }
+
+
+    function bindPostData(form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
@@ -323,6 +335,9 @@ window.addEventListener('DOMContentLoaded', function() {
     // .then(json => console.log(json))
 
 
+    fetch('http://localhost:3000/menu')
+        .then(data => data.json())
+        .then(res => console.log(res));
 
 
 }); 
