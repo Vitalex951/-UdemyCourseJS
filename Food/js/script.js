@@ -223,16 +223,16 @@ window.addEventListener('DOMContentLoaded', function() {
         bindPostData(item);
     });
 
-    const postData = (url, data) => {
-        const res =fetch(url, {
+    const postData = async(url, data) => {
+        const res = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-type': 'aplicatin/json'
             },
             body: data
         });
-        return res.json();
-    }
+        return await res.json();
+    };
 
 
     function bindPostData(form) {
@@ -249,9 +249,7 @@ window.addEventListener('DOMContentLoaded', function() {
             form.insertAdjacentElement('afterend', statusMessage);
         
 
-        
-
-            // request.setRequestHeader('Content-type', 'multipart/form-data'); Заголовк не нужен когда используме FormDate
+    
 
            
             const formData = new FormData(form);
@@ -261,20 +259,9 @@ window.addEventListener('DOMContentLoaded', function() {
                 object[key] = value;
             });
 
-            const json = 
 
 
-            // request.send(json);
-
-            // request.send(formData);
-
-            fetch('server.php', {
-                method: 'POST',
-                headers: {
-                    'Content-type': 'aplicatin/json'
-                },
-                body: JSON.stringify(object)
-            }).then(data => data.text())
+            postData('http://localhost:3000/requests', JSON.stringify(object))
             .then(data => {
                 console.log(data);
                 showThanksModal(message.succes);
@@ -284,16 +271,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }).finally(() => {
                 form.reset()});
 
-            // request.addEventListener('load', () =>  {
-            //     if (request.status === 200) {
-            //         console.log(request.response);
-            //         showThanksModal(message.succes);
-            //         form.reset();
-            //         statusMessage.remove();
-            //     } else {
-            //         showThanksModal(message.failure);
-            //     }
-            // });
+            
         });
     }
 
@@ -324,15 +302,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // fetch('https://jsonplaceholder.typicode.com/posts', {
-    //     method: "POST",
-    //     body: JSON.stringify({name: 'ALEX'}),
-    //     headers: {
-    //         'Content-type': 'application/json'
-    //     }
-    // })
-    // .then(response => response.json())
-    // .then(json => console.log(json))
 
 
     fetch('http://localhost:3000/menu')
